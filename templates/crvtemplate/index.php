@@ -4,17 +4,19 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 <html lang="<?php echo $this->language; ?>">
 	<head>
 		<jdoc:include type="head" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/images/apple-touch-icon-57x57-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
-		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="pingback" href="xmlrpc.php" />
-		<script type="text/javascript"></script>
-		<meta name="description" content="Agencia Digital | Sitios Web - Desarrollo de Aplicaciones - Estrategia y Marketing Online - Apps - Hosting - Dominios"/>
 		<link rel="canonical" href="index.php" />
+		
+		
+		
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta name="description" content="Agencia Digital | Sitios Web - Desarrollo de Aplicaciones - Estrategia y Marketing Online - Apps - Hosting - Dominios"/>
 		<meta property="og:locale" content="es_CO" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="CRV | Soluciones Software" />
@@ -26,6 +28,8 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		<meta name="twitter:description" content="Sitios Web - Desarrollo de Aplicaciones - Estrategia y Marketing Online - Apps - Hosting - Dominios" />
 		<meta name="twitter:title" content="CRV | SOLUCIONES SOFTWARE" />
 		<meta name="twitter:image" content="img/Desarrollo-de-Aplicaciones.jpg" />
+		
+		
 		<link rel='stylesheet' id='validate-engine-css-css'  href='<?php echo $tpath; ?>/css/style.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='validate-engine-css-css'  href='<?php echo $tpath; ?>/css/wysija-newsletters/css/validationEngine.jquery206d.css?ver=2.7.5' type='text/css' media='all' />
 		<link rel='stylesheet' id='fblb-css-css'  href='<?php echo $tpath; ?>/css/arscode-social-slider/fblb2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
@@ -50,27 +54,24 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		<link rel='stylesheet' id='wdc-main-styles-css'  href='<?php echo $tpath; ?>/css/wp-domain-checker/assets/style2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='wdc-styles-extras-css'  href='<?php echo $tpath; ?>/css/wp-domain-checker/assets/bootstrap-flat-extras2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='wdc-styles-flat-css'  href='<?php echo $tpath; ?>/css/wp-domain-checker/assets/bootstrap-flat2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
+		
+		<script src="<?php echo $tpath; ?>/js/function.js"></script>
 		<script type="text/javascript" src="<?php echo $tpath; ?>/js/jquery/jquery.min.js"></script>
-		<script type='text/javascript' src='<?php echo $tpath; ?>/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+		<script src="<?php echo $tpath; ?>/js/toastr.min.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+		
+		
+		
+		<script src="<?php echo $tpath; ?>/js/site.js"></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/arscode-social-slider/js/userscripts2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/arscode-social-slider/lionbars/jquery.lionbars.0.3.min2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
-		<script type='text/javascript'>
-		/* <![CDATA[ */
-		var subscriptio_vars = {"confirm_pause":"Are you sure you want to pause this subscription?","confirm_resume":"Are you sure you want to resume this subscription?","confirm_cancel":"Are you sure you want to cancel this subscription?"};
-		/* ]]> */
-		</script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/subscriptio/assets/js/frontend0ba6.js?ver=1.0.6'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/supreme-pricing-tables/public/assets/js/public8a54.js?ver=1.0.0'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/wp-retina-2x/js/picturefill.min5b75.js?ver=3.0.2'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/js/modernizr2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/js/jquery-parallax-set.min2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/js/rockthemes-parallax.min2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
-		<script type='text/javascript'>
-		/* <![CDATA[ */
-		var rockthemes = {"ajaxurl":"http:\/\/solucionescrv.com\/wp-admin\/admin-ajax.php","ajax_nonce":"310ed5f439","f_way":"http:\/\/solucionescrv.com\/wp-content\/themes\/crv soluciones software","frontend_options":{"activate_smooth_scroll":"1","disable_top_links_for_ipad":"1"}};
-		/* ]]> */
-		</script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/js/quasar.jquery.min2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/js/jquery.navgoco.min2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
 		<link rel='https://api.w.org/' href='wp-json/index.html' />
@@ -80,10 +81,8 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300|PT+Sans+Narrow:400,700|Pacifico" rel="stylesheet" type="text/css">
 		<link rel="shortcut icon" type="image/x-icon" href="img/forma16x16.png" />
 		<link href="<?php echo $tpath; ?>/css/toastr.min.css" rel="stylesheet" type="text/css" id="custom-background-css"/>
+		<script type='text/javascript' src='<?php echo $tpath; ?>/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
 		<link href="<?php echo $tpath; ?>/css/style2.css" rel="stylesheet" type="text/css" id="custom-background-css"/>
-		<script src="<?php echo $tpath; ?>/js/toastr.min.js"></script>
-		<script src="https://www.google.com/recaptcha/api.js"></script>
-		<script src="<?php echo $tpath; ?>/js/site.js"></script>
 		<link rel="stylesheet" href="<?php echo $tpath; ?>/css/style2.css"/>
 	</head>  
 	<body class="home page page-id-131 page-template-default custom-background <?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>">
@@ -214,10 +213,41 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				</div>
 				<hr/>
 				<div class="row">
-				<form enctype="multipart/form-data" id="form-contactar" class="rockthemes-form-builder checkbox-supported rockthemes-active" data-form-ref="3"><div class="row"><div class="large-12 columns "><div class="rockthemes_fb_element_container"><input type="text" data-element-type="text_field" class="rockthemes-fb-element input-element  " title="* Hola, Cual es tu nombre? " id="rfb_text_field-0" placeholder="* Hola, Cual es tu nombre? "></div><div class="rockthemes_fb_element_container"><input type="text" data-element-type="text_field" class="rockthemes-fb-element input-element  " title="* A que correo podemos escribirte? " id="rfb_text_field-1" placeholder="* A que correo podemos escribirte? "></div><div class="rockthemes_fb_element_container"><input type="text" data-element-type="text_field" class="rockthemes-fb-element input-element  " title="* Presupuesto Estimado" id="rfb_text_field-3" placeholder="* Presupuesto Estimado"></div><div class="rockthemes_fb_element_container"><input autocomplete="off" type="text" name="rfb_datepicker-0" id="rfb_datepicker-0" title="* Fecha que desea tener su diseño listo" placeholder="* Fecha que desea tener su diseño listo" data-element-type="datepicker" class="rockthemes-fb-element input-element rockthemes-fb-datepicker"></div><div class="rockthemes-fb-field-header-title">Marque los servicios de Diseño que desea</div></div></div><div class="row"><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-1" id="rfb_checkbox-1" type="checkbox" title="Diseño Gráfico " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-1" style="position: relative; top: -5px;"> Diseño Gráfico </label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-3" id="rfb_checkbox-3" type="checkbox" title="Diseño Corporativo " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-3" style="position: relative; top: -5px;"> Diseño Corporativo </label></p></div></div><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-2" id="rfb_checkbox-2" type="checkbox" title="Diseño Impresion" data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-2" style="position: relative; top: -5px;"> Diseño Impresion</label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-4" id="rfb_checkbox-4" type="checkbox" title="Branding" data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-4" style="position: relative; top: -5px;"> Branding</label></p></div></div><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-0" id="rfb_checkbox-0" type="checkbox" title="Diseño Web " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-0" style="position: relative; top: -5px;"> Diseño Web </label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-5" id="rfb_checkbox-5" type="checkbox" title="Diseño Multimedia " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-5" style="position: relative; top: -5px;"> Diseño Multimedia </label></p></div></div></div><div class="row"><div class="large-12 columns "><div class="rockthemes_fb_element_container"><textarea data-element-type="text_area" class="rockthemes-fb-element input-element" title="* Cuéntenos detalladamente lo que necesita" id="rfb_text_area-0" placeholder="* Cuéntenos detalladamente lo que necesita"></textarea></div></div></div>
-					<div class="g-recaptcha" data-sitekey="6LfrPB8UAAAAAI0y6YiTTeCdrvqkDWkjWBRgM-lT"></div>
-					<div class="clear"></div><br><br><div class="rockthemes-fb-send button button-rounded button-primary">Enviar <i class="sending"></i></div><span class="sending-result"></span></form>
-				</form>
+					<div id="primary" class="content-area large-6 column">
+						<h1>Nosotros podemos ayudarlo</h1>
+						<form enctype="multipart/form-data" id="form-contactar" method="post" action="modules/mod_send_mail/mail.php">
+							<div class="row">
+								<div class="large-12 columns">
+									<div class="rockthemes_fb_element_container">
+										<input type="text" data-element-type="text_field" class="rockthemes-fb-element input-element  " title="* Hola, Cual es tu nombre? " id="nombre" name="nombre" placeholder="* Hola, Cual es tu nombre? ">
+									</div>
+									<div class="rockthemes_fb_element_container">
+										<input type="text" data-element-type="text_field" class="rockthemes-fb-element input-element  " title="* Cual es tu telefono? " id="TelefonoRemitente" name="TelefonoRemitente" placeholder="* Cual es tu telefono? ">
+									</div>
+									<div class="rockthemes_fb_element_container">
+										<input type="text" data-element-type="text_field" class="rockthemes-fb-element input-element  " title="* A que correo podemos escribirte? " id="email" name="email" placeholder="* A que correo podemos escribirte? ">
+									</div>
+									<div class="rockthemes-fb-field-header-title">Marque los servicios de Diseño que desea</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-4 columns ">
+									<div class="rockthemes_fb_element_container">
+										<p>
+											<div class="check-box">
+												<i>
+													<input autocomplete="off" name="rfb_checkbox-1" id="rfb_checkbox-1" type="checkbox" title="Diseño Gráfico " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-1" style="position: relative; top: -5px;"> Diseño Gráfico </label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-3" id="rfb_checkbox-3" type="checkbox" title="Diseño Corporativo " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-3" style="position: relative; top: -5px;"> Diseño Corporativo </label></p></div></div><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-2" id="rfb_checkbox-2" type="checkbox" title="Diseño Impresion" data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-2" style="position: relative; top: -5px;"> Diseño Impresion</label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-4" id="rfb_checkbox-4" type="checkbox" title="Branding" data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-4" style="position: relative; top: -5px;"> Branding</label></p></div></div><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-0" id="rfb_checkbox-0" type="checkbox" title="Diseño Web " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-0" style="position: relative; top: -5px;"> Diseño Web </label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-5" id="rfb_checkbox-5" type="checkbox" title="Diseño Multimedia " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-5" style="position: relative; top: -5px;"> Diseño Multimedia </label></p></div></div></div><div class="row"><div class="large-12 columns "><div class="rockthemes_fb_element_container">
+														<textarea data-element-type="text_area" class="rockthemes-fb-element input-element" title="* Cuéntenos detalladamente lo que necesita" id="mensajeRemitente" name="mensajeRemitente" placeholder="* Cuéntenos detalladamente lo que necesita"></textarea>
+													</div>
+													</div>
+													</div>
+							<div class="g-recaptcha" data-sitekey="6LfrPB8UAAAAAI0y6YiTTeCdrvqkDWkjWBRgM-lT"></div>
+							<div class="clear"></div><br><br>
+							<button type="submit" class="rockthemes-fb-send button button-rounded button-primary">Enviar <i class="sending"></i>
+							</button>
+							<span class="sending-result"></span></form>
+						</form>
+					</div>
 				</div>
 			 </div>
 			 <div class="row">

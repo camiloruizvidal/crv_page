@@ -13,12 +13,14 @@ unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-more.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/system/js/core.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/system/js/modal.js']);
-unset($doc->_scripts[JURI::root(true) . '/media/system/js/caption.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery.min.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery-noconflict.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/jui/js/bootstrap.min.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery-migrate.min.js']);
 
+unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery.min.js']);
+unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery-noconflict.js']);
+unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery-migrate.min.js']);
 
 
 // generator tag
