@@ -11,7 +11,7 @@ class ModHelloWorldHelper
 		$sql = "SELECT 
 			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
 			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
-			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`, '/', `l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url`,
+			  concat(`l5nty_categories`.`alias`, '/', `l5nty_content`.`alias`) AS `url`,
 			  `l5nty_content`.`id`,
 			  `l5nty_content`.`title`,
 			  `l5nty_content`.`alias`,
@@ -61,7 +61,7 @@ class ModHelloWorldHelper
 		$sql = "SELECT 
 			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
 			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
-			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`, '/', `l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url`,
+			  concat(`l5nty_categories`.`alias`, '/', `l5nty_content`.`alias`) AS `url`,
 			  `l5nty_content`.`id`,
 			  `l5nty_content`.`title`,
 			  `l5nty_content`.`alias`,
