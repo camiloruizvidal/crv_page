@@ -11,7 +11,7 @@ class ModHelloWorldHelper
 		$sql = "SELECT 
 			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
 			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
-			  concat(`l5nty_categories`.`alias`, '/', `l5nty_content`.`alias`) AS `url`,
+			  concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
 			  `l5nty_content`.`id`,
 			  `l5nty_content`.`title`,
 			  `l5nty_content`.`alias`,
@@ -44,11 +44,39 @@ class ModHelloWorldHelper
 					</h3>
 					<a class="rpwe-img" href="' . $temp->url . '" title="' . $temp->title . '" rel="bookmark">
 						<img class="rpwe-alignleft rpwe-thumb" alt="'.$temp->title.'" srcset="'.$url.'">
-						' . $temp->introtext . '
+						' . strip_tags($temp->introtext) . '
 					</a>
 				</li>';
 		}
 		$html.='</ul>';
+		return $html;
+	}
+	public static function getEnlaces()
+	{
+		$sql="SELECT 
+		concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
+		`l5nty_content`.`title`
+			FROM
+			  `l5nty_content`
+			  INNER JOIN `l5nty_categories` ON (`l5nty_content`.`catid` = `l5nty_categories`.`id`)
+		WHERE
+		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 9
+		ORDER BY
+		`l5nty_content`.`title` ASC";
+		$html='<h3 class="widget-title">Enlaces </h3>
+				<hr class="footer-inline-hr" />
+				<div class="textwidget">';
+						$con = new JConfig();
+		$dbprefix = $con->dbprefix;
+		$db = &JFactory::getDBO();
+		$db->setQuery($sql);
+		$categorias = $db->loadObjectList();
+		$data=$db->loadObjectList();
+		foreach($data as $key=>$temp)
+		{
+			$html.='<a href="'.$temp->url.'">'.$temp->title.'</a> <br />';
+		}
+		$html.='</div>';
 		return $html;
 	}
     public static function getServices($CantServices)
@@ -61,7 +89,7 @@ class ModHelloWorldHelper
 		$sql = "SELECT 
 			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
 			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
-			  concat(`l5nty_categories`.`alias`, '/', `l5nty_content`.`alias`) AS `url`,
+			  concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
 			  `l5nty_content`.`id`,
 			  `l5nty_content`.`title`,
 			  `l5nty_content`.`alias`,
@@ -89,7 +117,7 @@ class ModHelloWorldHelper
 						<a href="' . $temp->url . '" title="' . $temp->title . '">
 							<img width="180" height="180" src="' . $url . '" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="' . $temp->alias . '" srcset="' . $url . '" sizes="(max-width: 180px) 100vw, 180px" />
 							' . $temp->title . '
-							<span class="product-title">' . $temp->introtext . '</span>
+							<span class="product-title">' . strip_tags($temp->introtext) . '</span>
 						</a>
 					 </li>';
 		}

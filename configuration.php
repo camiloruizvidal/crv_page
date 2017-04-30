@@ -48,12 +48,12 @@ class JConfig {
 	public $MetaKeys = '';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
-	public $MetaVersion = '0';
+	public $MetaVersion = '1';
 	public $robots = '';
 	public $sef = '1';
 	public $sef_rewrite = '1';
-	public $sef_suffix = '0';
-	public $unicodeslugs = '1';
+	public $sef_suffix = '1';
+	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
 	public $log_path = 'C:\\xampp\\htdocs\\new_crv\\administrator/logs';

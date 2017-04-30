@@ -236,7 +236,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 										<p>
 											<div class="check-box">
 												<i>
-													<input autocomplete="off" name="rfb_checkbox-1" id="rfb_checkbox-1" type="checkbox" title="Diseño Gráfico " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-1" style="position: relative; top: -5px;"> Diseño Gráfico </label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-3" id="rfb_checkbox-3" type="checkbox" title="Diseño Corporativo " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-3" style="position: relative; top: -5px;"> Diseño Corporativo </label></p></div></div><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-2" id="rfb_checkbox-2" type="checkbox" title="Diseño Impresion" data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-2" style="position: relative; top: -5px;"> Diseño Impresion</label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-4" id="rfb_checkbox-4" type="checkbox" title="Branding" data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-4" style="position: relative; top: -5px;"> Branding</label></p></div></div><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-0" id="rfb_checkbox-0" type="checkbox" title="Diseño Web " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-0" style="position: relative; top: -5px;"> Diseño Web </label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-5" id="rfb_checkbox-5" type="checkbox" title="Diseño Multimedia " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-5" style="position: relative; top: -5px;"> Diseño Multimedia </label></p></div></div></div><div class="row"><div class="large-12 columns "><div class="rockthemes_fb_element_container">
+													<input autocomplete="off" name="rfb_checkbox-1" id="rfb_checkbox-1" type="checkbox" title="Diseño Gráfico " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-1" style="position: relative; top: -5px;"> Diseño Gráfico </label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-3" id="rfb_checkbox-3" type="checkbox" title="Diseño Corporativo " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-3" style="position: relative; top: -5px;"> Diseño Corporativo </label></p></div></div><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-2" id="rfb_checkbox-2" type="checkbox" title="Diseño Impresion" data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-2" style="position: relative; top: -5px;"> Diseño Impresion</label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-4" id="rfb_checkbox-4" type="checkbox" title="noniko" data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-4" style="position: relative; top: -5px;"> Noniko</label></p></div></div><div class="large-4 columns "><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-0" id="rfb_checkbox-0" type="checkbox" title="Diseño Web " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-0" style="position: relative; top: -5px;"> Diseño Web </label></p></div><div class="rockthemes_fb_element_container"><p><div class="check-box"><i><input autocomplete="off" name="rfb_checkbox-5" id="rfb_checkbox-5" type="checkbox" title="Diseño Multimedia " data-element-type="checkbox" class="rockthemes-fb-element input-element checkbox-element" value="true"></i></div> <label for="rfb_checkbox-5" style="position: relative; top: -5px;"> Diseño Multimedia </label></p></div></div></div><div class="row"><div class="large-12 columns "><div class="rockthemes_fb_element_container">
 														<textarea data-element-type="text_area" class="rockthemes-fb-element input-element" title="* Cuéntenos detalladamente lo que necesita" id="mensajeRemitente" name="mensajeRemitente" placeholder="* Cuéntenos detalladamente lo que necesita"></textarea>
 													</div>
 													</div>
@@ -424,16 +424,12 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 						 <ul class="large-block-grid-4 small-block-grid-1">
 							<li>
 							   <aside id="text-5" class="widget widget_text">
-								  <h3 class="widget-title">Enlaces </h3>
-								  <hr class="footer-inline-hr" />
-								  <div class="textwidget">
 								  
-									 <a href="preguntas-frecuentes/index.html"> Preguntas Frecuentes</a> <br />
-									 <a href="proyectos/index.html">Tengo un proyecto</a> <br />
-									 <a href="politicas-de-privacidad/index.html">Pol&#237;ticas de Privacidad</a>  <br />
-									 <a href="condiciones-del-servicio/index.html">T&#233;rminos y Condiciones</a>
-								  </div>
-							   </aside>
+								  <?php
+									$hello = modHelloWorldHelper::getEnlaces();
+									require JModuleHelper::getLayoutPath('mod_helloworld');
+								?>
+								</aside>
 							   <aside id="text-9" class="widget widget_text">
 							</li>
 							<li>
@@ -473,7 +469,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 								  <h3 class="widget-title">Publicaciones Recientes </h3>
 								  <hr class="footer-inline-hr" />
 								  <div  class="rpwe-block ">
-								<jdoc:include type="modules" name="position-1" style="xhtml" />
 								<?php
 									$hello = modHelloWorldHelper::getNotice(3);
 									require JModuleHelper::getLayoutPath('mod_helloworld');
@@ -499,7 +494,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				<div class="footer-bottom">
 				   <div class="row">
 					  <div class="large-6 medium-6 columns footer-bottom-left centered-text-responsive-small">
-						 © Copyright - CRV SOLUCIONES Software
+						<a href="http://solucionescrv.com">© Copyright - CRV SOLUCIONES Software</a>
 					  </div>
 					  <div class="large-6 medium-6 columns right-text centered-text-responsive-small">
 						 <aside class="footer-bottom-widget">
