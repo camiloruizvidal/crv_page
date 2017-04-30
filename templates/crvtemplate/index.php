@@ -210,7 +210,8 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				<div class="row">
 				<jdoc:include type="component" />
 				</div>
-				<hr/>
+			</div>
+			<div id="contactenos"  class="rockthemes-fullwidth-colored" style="background:#ECF0D6; padding-top:60px; padding-bottom:60px;">
 				<div class="row">
 					<div id="primary" class="content-area large-6 column">
 						<h1>Nosotros podemos ayudarlo</h1>
@@ -246,6 +247,10 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 							</button>
 							<span class="sending-result"></span></form>
 						</form>
+					</div>
+					<div class="content-area large-6 column">
+					<img src="<?php echo $tpath; ?>/images/nosotros.png">
+					</div>
 					</div>
 				</div>
 			 </div>
