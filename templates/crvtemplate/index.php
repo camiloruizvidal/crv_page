@@ -209,7 +209,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 			 </div>
 			 <div id="servicios"  class="rockthemes-fullwidth-colored" style="background:#ecf0f1; padding-top:60px; padding-bottom:60px;">
 				<div class="row">
-				 <jdoc:include type="component" />
+				<jdoc:include type="component" />
 				</div>
 				<hr/>
 				<div class="row">
