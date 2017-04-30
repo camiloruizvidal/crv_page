@@ -1,9 +1,53 @@
 <?php
 class ModHelloWorldHelper
 {
+	public function getClients($CantClient)
+	{
+		$ds=DIRECTORY_SEPARATOR;
+		$con = new JConfig();
+		$dbprefix = $con->dbprefix;
+		$db = &JFactory::getDBO();
+		$sql = "SELECT 
+			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
+			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
+			  concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
+			  `l5nty_content`.`id`,
+			  `l5nty_content`.`title`,
+			  `l5nty_content`.`alias`,
+			  concat(SUBSTRING(`l5nty_content`.`introtext`,1,80),'...' ) AS `introtext`,
+			  `l5nty_content`.`images`
+			FROM
+			  `l5nty_content`
+			  INNER JOIN `l5nty_categories` ON (`l5nty_content`.`catid` = `l5nty_categories`.`id`)
+		WHERE
+		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 12
+		ORDER BY
+		`l5nty_content`.`title` ASC
+		LIMIT {$CantClient}";
+		$db->setQuery($sql);
+		$categorias = $db->loadObjectList();
+		$data=$db->loadObjectList();
+		$html= '<h3 class="widget-title"><a href="">Ellos confian en nosotros</a></h3>
+				<hr class="footer-inline-hr" />
+				<ul class="rpwe-ul">';
+		foreach($data as $key=>$temp)
+		{
+			$url=json_decode($temp->images)->image_intro;
+			$html.='
+				<li>
+					<a href="' . $temp->url . '" title="' . $temp->title . '" rel="bookmark">
+						<img alt="'.$temp->title.'" srcset="'.$url.'">
+						' . $temp->title . '
+					</a>
+				</li>
+				<hr class="footer-inline-hr" />';
+		}
+		$html.='</ul>';
+		return $html;
+	}
 	public function getNotice($CantNotices)
 	{
-				$ds=DIRECTORY_SEPARATOR;
+		$ds=DIRECTORY_SEPARATOR;
 		$html= '<ul class="rpwe-ul">';
 		$con = new JConfig();
 		$dbprefix = $con->dbprefix;

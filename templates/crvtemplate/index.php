@@ -13,7 +13,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		
 		
 		
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<meta name="description" content="Agencia Digital | Sitios Web - Desarrollo de Aplicaciones - Estrategia y Marketing Online - Apps - Hosting - Dominios"/>
@@ -75,7 +74,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/js/quasar.jquery.min2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
 		<script type='text/javascript' src='<?php echo $tpath; ?>/css/js/jquery.navgoco.min2654.js?ver=384287c8b5f96c1b1ac7e6cff2007dab'></script>
 		<link rel='https://api.w.org/' href='wp-json/index.html' />
-		<link rel='shortlink' href='index.html' />
+		<link rel='shortlink' href='index.php' />
 		<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embedcd0c.json?url=http%3A%2F%2Fsolucionescrv.com%2F" />
 		<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed1016?url=http%3A%2F%2Fsolucionescrv.com%2F&amp;format=xml" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300|PT+Sans+Narrow:400,700|Pacifico" rel="stylesheet" type="text/css">
@@ -98,7 +97,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 			 <div id="main-nav-bg" class="nav-box nav-margin-vertical header-model-7">
 				<div class="row">
 				   <div class="large-3 columns centered-text-responsive">
-					  <div class="logo-container"><a href="index.html"><img src="<?php echo $tpath; ?>/img/logoRetina.png" alt="CRV SOLUCIONES SOFTWARESV" style="max-width:300px; max-height:48px; width:100%;" /></a></div>
+					  <div class="logo-container"><a href="index.php"><img src="<?php echo $tpath; ?>/img/logoRetina.png" alt="CRV SOLUCIONES SOFTWARESV" style="max-width:300px; max-height:48px; width:100%;" /></a></div>
 				   </div>
 				   <div class="large-9 columns quasar-nav-fixed-ready">
 					  <div class="nav-right-desktop">
@@ -278,19 +277,19 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 								  <div>
 									 <ul style="position: relative;">
 										<li>
-										   <h3>Creatividad</h3>
+										   <h4>Creatividad</h4>
 										</li>
 										<li>
-										   <h3>Innovaci&#243;n</h3>
+										   <h4>Innovaci&#243;n</h4>
 										</li>
 										<li>
-										   <h3>Compromiso</h3>
+										   <h4>Compromiso</h4>
 										</li>
 										<li>
-										   <h3>Responsabilidad&nbsp;</h3>
+										   <h4>Responsabilidad&nbsp;</h4>
 										</li>
 										<li>
-										   <h3>Calidad&nbsp;</h3>
+										   <h4>Calidad&nbsp;</h4>
 										</li>
 									 </ul>
 								  </div>
@@ -421,7 +420,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				<div class="footer-large">
 				   <div class="row">
 				   <div class="large-12 columns">
-						 <ul class="large-block-grid-4 small-block-grid-1">
+						 <ul class="large-block-grid-3 small-block-grid-1">
 							<li>
 							   <aside id="text-5" class="widget widget_text">
 								  
@@ -430,9 +429,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 									require JModuleHelper::getLayoutPath('mod_helloworld');
 								?>
 								</aside>
-							   <aside id="text-9" class="widget widget_text">
-							</li>
-							<li>
+								<hr class="footer-inline-hr" />
 							   <aside id="wysija-2" class="widget widget_wysija">
 								  <h3 class="widget-title">Suscr&#237;bete a nuestro Bolet&#237;n</h3>
 								  <hr class="footer-inline-hr" />
@@ -460,7 +457,10 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 									 </form>
 								  </div>
 							   </aside>
+							
+							   <aside id="text-9" class="widget widget_text">
 							</li>
+							
 							<li>
 							   <style>
 								  .rpwe-block ul{list-style:none!important;margin-left:0!important;padding-left:0!important;}.rpwe-block li{border-bottom:1px solid #eee;margin-bottom:10px;padding-bottom:10px;list-style-type: none;}.rpwe-block a{display:inline!important;text-decoration:none;}.rpwe-block h3{background:none!important;clear:none;margin-bottom:0!important;margin-top:0!important;font-weight:400;font-size:12px!important;line-height:1.5em;}.rpwe-thumb{border:1px solid #EEE!important;box-shadow:none!important;margin:2px 10px 2px 0;padding:3px!important;}.rpwe-summary{font-size:12px;}.rpwe-time{color:#bbb;font-size:11px;}.rpwe-comment{color:#bbb;font-size:11px;padding-left:5px;}.rpwe-alignleft{display:inline;float:left;}.rpwe-alignright{display:inline;float:right;}.rpwe-aligncenter{display:block;margin-left: auto;margin-right: auto;}.rpwe-clearfix:before,.rpwe-clearfix:after{content:"";display:table !important;}.rpwe-clearfix:after{clear:both;}.rpwe-clearfix{zoom:1;}
@@ -479,10 +479,8 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 							</li>
 							<li>
 							   <aside id="woocommerce_products-2" class="widget woocommerce widget_products">
-								<h3 class="widget-title">Servicios</h3>
-								<hr class="footer-inline-hr" />
 								<?php
-									$hello = modHelloWorldHelper::getServices(3);
+									$hello = modHelloWorldHelper::getClients(6);
 									require JModuleHelper::getLayoutPath('mod_helloworld');
 								?>  
 							   </aside>
