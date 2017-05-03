@@ -22,12 +22,13 @@ class ModHelloWorldHelper
 		WHERE
 		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 12
 		ORDER BY
+		rand(),
 		`l5nty_content`.`title` ASC
 		LIMIT {$CantClient}";
 		$db->setQuery($sql);
 		$categorias = $db->loadObjectList();
 		$data=$db->loadObjectList();
-		$html= '<h3 class="widget-title"><a href="">Ellos confian en nosotros</a></h3>
+		$html= '<a href="./2-Uncategorised/22-clientes"><h3 class="widget-title">Ellos confian en nosotros</h3></a>
 				<hr class="footer-inline-hr" />
 				<ul class="rpwe-ul">';
 		foreach($data as $key=>$temp)

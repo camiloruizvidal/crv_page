@@ -51,8 +51,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		<link rel='stylesheet' id='animate-css-css'  href='<?php echo $tpath; ?>/css/animate2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='tf-compiled-options-wdc-options-css'  href='<?php echo $tpath; ?>/css/titan-framework-wdc-options-css2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='wdc-main-styles-css'  href='<?php echo $tpath; ?>/css/wp-domain-checker/assets/style2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
-		<link rel='stylesheet' id='wdc-styles-extras-css'  href='<?php echo $tpath; ?>/css/wp-domain-checker/assets/bootstrap-flat-extras2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
-		<link rel='stylesheet' id='wdc-styles-flat-css'  href='<?php echo $tpath; ?>/css/wp-domain-checker/assets/bootstrap-flat2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
 		
 		<script src="<?php echo $tpath; ?>/js/function.js"></script>
 		<script type="text/javascript" src="<?php echo $tpath; ?>/js/jquery/jquery.min.js"></script>
