@@ -36,3 +36,6 @@ body.custom-background { background-image: url('../img/greyzz.png'); background-
 #services li{
 		margin-top: 10px !important;
 }
+.img-responsive{
+	width:100%;
+}

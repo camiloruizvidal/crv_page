@@ -169,4 +169,83 @@ class ModHelloWorldHelper
 		$html.='</ul>';
 		return $html;
 	}
+	public function getServicesall()
+	{
+				$ds=DIRECTORY_SEPARATOR;
+		$html= '';
+		$con = new JConfig();
+		$dbprefix = $con->dbprefix;
+		$db = &JFactory::getDBO();
+		$sql = "SELECT 
+			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
+			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
+			  concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
+			  `l5nty_content`.`id`,
+			  `l5nty_content`.`title`,
+			  `l5nty_content`.`alias`,
+			  concat(SUBSTRING(`l5nty_content`.`introtext`,1,80),'...' ) AS `introtext`,
+			  `l5nty_content`.`images`
+			FROM
+			  `l5nty_content`
+			  INNER JOIN `l5nty_categories` ON (`l5nty_content`.`catid` = `l5nty_categories`.`id`)
+		WHERE
+		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 8
+		ORDER BY
+		`l5nty_content`.`title` ASC";
+		$db->setQuery($sql);
+		$categorias = $db->loadObjectList();
+		$data=$db->loadObjectList();
+		foreach($data as $key=>$temp)
+		{
+			$url=json_decode($temp->images)->image_intro;
+			if($url==='')
+			{
+				$url="templates{$ds}crvtemplate{$ds}img{$ds}logoRetina.png";
+			}
+			$html.='<div class="large-4 columns">
+						<div class="boxed-layout boxed-colors padding">
+                     <div class="rock-iconictext-container row rock-icon-top">
+                        <div class="large-12 columns rockicon-container-column padding">
+                           <div class="rockicon-container  rockicon-quasar-box" style="background: rgb(79, 88, 100); color: rgb(68, 68, 68); width: 80px; height: 80px; line-height: 36px;" icon-color="#444444" icon-hover-color="#ffffff" bg-color="#4f5864" bg-hover-color="#00aae8">
+                              <div class="quasar-style-dot"></div>
+                              <i class="fa-flask icon-3"></i>
+                           </div>
+                        </div>
+                        <div class="large-12 columns">
+                           <div class="rock-iconictext-header-title"><strong>' . $temp->title . '</strong></div>
+                           <br>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="hr-shadow-mask" style="width:75%; margin:0px auto;">
+                           <hr class="hr-shadow active shadow-effect curve curve-hz-1">
+                        </div>
+                        <div class="large-12 columns">
+                           <div class="rock-iconictext-content">
+                              <p>' . $temp->introtext . '</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="clear"></div>
+                  </div>
+				  <a href="' . $temp->url . '" style=" display:block;" class="escapea button 
+                     button-primary
+                     button-small
+                     ">
+                  <i class="fa-share-square-o "></i> 
+                  Ver mas detalles...
+                  </a>
+				  <div>
+                     <p style="text-align: center;">
+                     </p><div class="rockthemes-divider">
+                        <span class="divider-line">
+                        <span class="divider-symbol"></span>
+                        </span>
+                     </div>
+                     <p></p>
+                  </div>
+					</div>
+					 ';
+		}
+		return $html;
+	}
 }

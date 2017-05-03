@@ -1,7 +1,8 @@
 <?php defined( '_JEXEC' ) or die; 
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
-?><!doctype html>
-<html lang="<?php echo $this->language; ?>">
+?><!doctype html><?php
+require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
+?><html lang="<?php echo $this->language; ?>">
 	<head>
 		<jdoc:include type="head" />
 		<link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/images/apple-touch-icon-57x57-precomposed.png">
@@ -184,7 +185,15 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 						 <h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;"><strong>
 						 <script>$(function()
 						 {
-							$('#title').html($('title').text()); 
+							 if($('title').text()==='Home')
+							 {
+								$('title').text('crv soluciones software'); 
+								$('#title').html('<div><h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;"><strong>&nbsp;Agencia Digital</strong></span></h1><h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;">Sitios Web - Desarrollo de Aplicaciones - Estrategia y Marketing Online - Apps - Hosting - Dominios - Streaming</span></h1><p></p><div class="rockthemes-divider"></div><p></p></div>');
+								$('.page-header').html('<h1 style="text-align: center;">Nuestros <strong>Servicios&nbsp;</strong></h1>');
+							 }
+							 else{
+								$('#title').html($('title').text()); 
+							 }
 						 });</script>
 						 <div id="title"></div>
 						 </strong></span></h1>
@@ -202,7 +211,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 			 </div>
 			 <div id="servicios"  class="rockthemes-fullwidth-colored" style="background:#ecf0f1; padding-top:60px; padding-bottom:60px;">
 				<div class="row">
-				<jdoc:include type="component" />
+				<jdoc:include type="component"/>
 				</div>
 			</div>
 			<div id="contactenos"  class="rockthemes-fullwidth-colored" style="background:#ECF0D6; padding-top:60px; padding-bottom:60px;">
@@ -406,10 +415,8 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				</div>
 			 </div>
 			 <div>
-				<div class="row">        </div>
-						<?php
-						require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
-						?>
+				<div class="row">
+				</div>
 			 </div>
 			 <div class="clear"></div>
 			 <div id="footer" class="footer">
@@ -422,8 +429,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 						 <ul class="large-block-grid-3 small-block-grid-1">
 							<li>
 							   <aside id="text-5" class="widget widget_text">
-								  
-								  <?php
+								<?php
 									$hello = modHelloWorldHelper::getEnlaces();
 									require JModuleHelper::getLayoutPath('mod_helloworld');
 								?>
