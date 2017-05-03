@@ -36,10 +36,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		<link rel='stylesheet' id='prettyphoto-css'  href='<?php echo $tpath; ?>/css/prettyphoto-media/css/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='screen' />
 		<link rel='stylesheet' id='subscriptio_frontend-css'  href='<?php echo $tpath; ?>/css/subscriptio/assets/css/frontend0ba6.css?ver=1.0.6' type='text/css' media='all' />
 		<link rel='stylesheet' id='supreme-pricing-tables-plugin-styles-css'  href='<?php echo $tpath; ?>/css/supreme-pricing-tables/public/assets/css/public8a54.css?ver=1.0.0' type='text/css' media='all' />
-		<link rel='stylesheet' id='woocommerce-layout-css'  href='<?php echo $tpath; ?>/css/woocommerce/assets/css/woocommerce-layouta19e.css?ver=2.6.9' type='text/css' media='all' />
-		<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='<?php echo $tpath; ?>/css/woocommerce/assets/css/woocommerce-smallscreena19e.css?ver=2.6.9' type='text/css' media='only screen and (max-width: 768px)' />
-		<link rel='stylesheet' id='woocommerce-general-css'  href='<?php echo $tpath; ?>/css/woocommerce/assets/css/woocommercea19e.css?ver=2.6.9' type='text/css' media='all' />
-		<link rel='stylesheet' id='wp-core-css'  href='<?php echo $tpath; ?>/css/wp-core2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='foundation-elements-css'  href='<?php echo $tpath; ?>/css/foundation-scss2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='foundation-ie7-css'  href='<?php echo $tpath; ?>/css/foundation-ie82654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='icomoon-css-css'  href='<?php echo $tpath; ?>/css/icomoon2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
@@ -51,7 +47,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		<link rel='stylesheet' id='animate-css-css'  href='<?php echo $tpath; ?>/css/animate2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='tf-compiled-options-wdc-options-css'  href='<?php echo $tpath; ?>/css/titan-framework-wdc-options-css2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
 		<link rel='stylesheet' id='wdc-main-styles-css'  href='<?php echo $tpath; ?>/css/wp-domain-checker/assets/style2654.css?ver=384287c8b5f96c1b1ac7e6cff2007dab' type='text/css' media='all' />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
 		
 		<script src="<?php echo $tpath; ?>/js/function.js"></script>
 		<script type="text/javascript" src="<?php echo $tpath; ?>/js/jquery/jquery.min.js"></script>
