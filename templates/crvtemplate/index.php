@@ -190,8 +190,10 @@ require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
 								$('title').text('crv soluciones software'); 
 								$('#title').html('<div><h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;"><strong>&nbsp;Agencia Digital</strong></span></h1><h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;">Sitios Web - Desarrollo de Aplicaciones - Estrategia y Marketing Online - Apps - Hosting - Dominios - Streaming</span></h1><p></p><div class="rockthemes-divider"></div><p></p></div>');
 								$('.page-header').html('<h1 style="text-align: center;">Nuestros <strong>Servicios&nbsp;</strong></h1>');
+								$('#contactenos').hide();
 							 }
-							 else{
+							 else
+							 {
 								$('#title').html($('title').text()); 
 							 }
 						 });</script>
