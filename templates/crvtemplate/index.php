@@ -1,8 +1,8 @@
 <?php defined( '_JEXEC' ) or die; 
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
-?><!doctype html><?php
 require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
-?><html lang="<?php echo $this->language; ?>">
+?><!doctype html>
+<html lang="<?php echo $this->language; ?>">
 	<head>
 		<jdoc:include type="head" />
 		<link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/images/apple-touch-icon-57x57-precomposed.png">
@@ -104,13 +104,7 @@ require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
 									 <div class="desc">Services</div>
 								  </a>
 								  <ul class="sub-menu">
-									 <li id="menu-item-1304" class="menu-item menu-item-type-post_type menu-item-object-page">
-										<a href="diseno/index.html">
-										   Dise&#208;o
-										   <div class="desc"></div>
-										</a>
-									 </li>
-									 <li id="menu-item-1306" class="menu-item menu-item-type-post_type menu-item-object-page">
+									<li id="menu-item-1306" class="menu-item menu-item-type-post_type menu-item-object-page">
 										<a href="marketing/index.html">
 										   Estrategia Digital y Marketing
 										   <div class="desc"></div>
@@ -174,7 +168,8 @@ require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
 			 <div class="row"></div>
 			 <div class="row">
 			 </div>
-			 <div  class="rockthemes-parallax" 
+			 
+			 <div id="img-banner" class="rockthemes-parallax" 
 				parallax-model="height_specific" 
 				parallax-bg-image="<?php echo $tpath; ?>/img/fondo2.jpg" 
 				parallax-mask-height="400">
@@ -183,12 +178,30 @@ require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
 					  <hr style="margin:15px 0px; width:100%; height:0px; border-bottom:none; border-top:1px solid #999999;" />
 					  <div>
 						 <h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;"><strong>
-						 <script>$(function()
+						 <script>
+						function size_screen()
+						{
+							console.log($(window).width());
+							if($(window).width()<630)
+							{
+								$('#img-banner .parallax-mask-class').attr('style','background:url(/crvproyectos/crv/templates/crvtemplate/img/fondo2.jpg) 50% 0 no-repeat fixed;height: 250px;background-size:100% auto;');
+							}
+							else
+							{
+								$('#img-banner .parallax-mask-class').attr('style','background:url(/crvproyectos/crv/templates/crvtemplate/img/fondo2.jpg) 50% 0 no-repeat fixed;height: 400px;background-size:100% auto;');
+							}
+						}
+						 $(window).resize(function() 
+						{
+							size_screen();
+						});
+						 $(function()
 						 {
+							//size_screen();
 							 if($('title').text()==='Home')
 							 {
 								$('title').text('crv soluciones software'); 
-								$('#title').html('<div><h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;"><strong>&nbsp;Agencia Digital</strong></span></h1><h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;">Sitios Web - Desarrollo de Aplicaciones - Estrategia y Marketing Online - Apps - Hosting - Dominios - Streaming</span></h1><p></p><div class="rockthemes-divider"></div><p></p></div>');
+								$('#title').html('<div><h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;"><strong>&nbsp;CRV | SOLUCIONES SOFTWARE</strong></span></h1><h1 class="MainSection-title title-Main" style="text-align: center;"><span style="color: #ffffff;">Desarrollo software y marketing digital</span></h1><p></p><div class="rockthemes-divider"></div><p></p></div>');
 								$('.page-header').html('<h1 style="text-align: center;">Nuestros <strong>Servicios&nbsp;</strong></h1>');
 								$('#contactenos').hide();
 							 }
@@ -220,7 +233,7 @@ require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
 				<div class="row">
 					<div id="primary" class="content-area large-6 column">
 						<h1>Nosotros podemos ayudarlo</h1>
-						<form enctype="multipart/form-data" id="form-contactar" method="post" action="modules/mod_send_mail/mail.php">
+						<form enctype="multipart/form-data" id="form-contactar" method="post" action="<?php echo $tpath; ?>/send_mail/mail.php">
 							<div class="row">
 								<div class="large-12 columns">
 									<div class="rockthemes_fb_element_container">
