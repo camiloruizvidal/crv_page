@@ -105,45 +105,39 @@ require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
 								  </a>
 								  <ul class="sub-menu">
 									<li id="menu-item-1306" class="menu-item menu-item-type-post_type menu-item-object-page">
-										<a href="marketing/index.html">
+										<a href="8-productos-y-servicios/6-marketing-digital">
 										   Estrategia Digital y Marketing
 										   <div class="desc"></div>
 										</a>
 									 </li>
 									 <li id="menu-item-1301" class="menu-item menu-item-type-post_type menu-item-object-page">
-										<a href="sitiosweb/index.html">
+										<a href="8-productos-y-servicios/8-paginas-web">
 										   Sitios Web
 										   <div class="desc"></div>
 										</a>
 									 </li>
 									 <li id="menu-item-1303" class="menu-item menu-item-type-post_type menu-item-object-page">
-										<a href="desarrollo/index.html">
+										<a href="8-productos-y-servicios/9-desarrollo-software">
 										   Desarrollo de Software
 										   <div class="desc"></div>
 										</a>
 									 </li>
 									 <li id="menu-item-1302" class="menu-item menu-item-type-post_type menu-item-object-page">
-										<a href="apps/index.html">
+										<a href="8-productos-y-servicios/10-app-mobiles">
 										   Apps M&#243;viles
 										   <div class="desc"></div>
 										</a>
 									 </li>
 								  </ul>
 							   </li>
-							   <li id="menu-item-1305" class="menu-item menu-item-type-post_type menu-item-object-page">
-								  <a href="dominios/index.html">
-									 Dominios
-									 <div class="desc">Domains</div>
-								  </a>
-							   </li>
 							   <li id="menu-item-1307" class="menu-item menu-item-type-post_type menu-item-object-page">
-								  <a href="cloudhosting/index.html">
-									 Alojamiento Web
-									 <div class="desc">Dedicated Hosting</div>
+								  <a href="8-productos-y-servicios/12-hosting-y-alojamiento">
+									Alojamiento Web
+									<div class="desc">Dedicated Hosting</div>
 								  </a>
 							   </li>
 							   <li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page">
-								  <a href="contactenos/index.html">
+								  <a href="8-index/8-productos-y-servicios/26-contactenos">
 									 Cont&#225;ctenos
 									 <div class="desc">Contact Us</div>
 								  </a>
