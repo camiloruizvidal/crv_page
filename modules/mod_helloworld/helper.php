@@ -171,7 +171,7 @@ class ModHelloWorldHelper
 	}
 	public function getServicesall()
 	{
-				$ds=DIRECTORY_SEPARATOR;
+		$ds=DIRECTORY_SEPARATOR;
 		$html= '';
 		$con = new JConfig();
 		$dbprefix = $con->dbprefix;
@@ -202,49 +202,45 @@ class ModHelloWorldHelper
 			{
 				$url="templates{$ds}crvtemplate{$ds}img{$ds}logoRetina.png";
 			}
-			$html.='<div class="large-4 columns">
-						<div class="boxed-layout boxed-colors padding">
-                     <div class="rock-iconictext-container row rock-icon-top">
-                        <div class="large-12 columns rockicon-container-column padding">
-                           <div class="rockicon-container  rockicon-quasar-box" style="background: rgb(79, 88, 100); color: rgb(68, 68, 68); width: 80px; height: 80px; line-height: 36px;" icon-color="#444444" icon-hover-color="#ffffff" bg-color="#4f5864" bg-hover-color="#00aae8">
-                              <div class="quasar-style-dot"></div>
-                              <i class="fa-flask icon-3"></i>
-                           </div>
-                        </div>
-                        <div class="large-12 columns">
-                           <div class="rock-iconictext-header-title"><strong>' . $temp->title . '</strong></div>
-                           <br>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="hr-shadow-mask" style="width:75%; margin:0px auto;">
-                           <hr class="hr-shadow active shadow-effect curve curve-hz-1">
-                        </div>
-                        <div class="large-12 columns">
-                           <div class="rock-iconictext-content">
-                              <p>' . $temp->introtext . '</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="clear"></div>
-                  </div>
-				  <a href="' . $temp->url . '" style=" display:block;" class="escapea button 
-                     button-primary
-                     button-small
-                     ">
-                  <i class="fa-share-square-o "></i> 
-                  Ver mas detalles...
-                  </a>
-				  <div>
-                     <p style="text-align: center;">
-                     </p><div class="rockthemes-divider">
-                        <span class="divider-line">
-                        <span class="divider-symbol"></span>
-                        </span>
-                     </div>
-                     <p></p>
-                  </div>
-					</div>
-					 ';
+			$html.='
+<div class="large-4 columns">
+<div class="boxed-layout boxed-colors padding">
+	<div class="rock-iconictext-container row rock-icon-top">
+		<div class="large-12 columns rockicon-container-column padding">
+			<div class="rockicon-container  rockicon-quasar-box" style="background: rgb(79, 88, 100); color: rgb(68, 68, 68); width: 80px; height: 80px; line-height: 36px;" icon-color="#444444" icon-hover-color="#ffffff" bg-color="#4f5864" bg-hover-color="#00aae8">
+				<div class="quasar-style-dot"></div>
+				<i class="fa-flask icon-3"></i>
+			</div>
+		</div>
+		<div class="large-12 columns">
+			<div class="rock-iconictext-header-title"><strong>' . $temp->title . '</strong></div>
+			<br>
+		</div>
+		<div class="clear"></div>
+		<div class="hr-shadow-mask" style="width:75%; margin:0px auto;">
+			<hr class="hr-shadow active shadow-effect curve curve-hz-1">
+		</div>
+		<div class="large-12 columns">
+			<div class="rock-iconictext-content">
+				<p>' . $temp->introtext . '</p>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	</div>
+	<a href="' . $temp->url . '" style=" display:block;" class="escapea button button-primary button-small">
+		<i class="fa-share-square-o "></i>Ver mas detalles...
+	</a>
+	<div>
+		<p style="text-align: center;"></p>
+		<div class="rockthemes-divider">
+			<span class="divider-line">
+				<span class="divider-symbol"></span>
+			</span>
+		</div>
+		<p></p>
+	</div>
+</div>';
 		}
 		return $html;
 	}
