@@ -8,22 +8,22 @@ class ModHelloWorldHelper
 		$dbprefix = $con->dbprefix;
 		$db = &JFactory::getDBO();
 		$sql = "SELECT 
-			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
-			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
-			  concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
-			  `l5nty_content`.`id`,
-			  `l5nty_content`.`title`,
-			  `l5nty_content`.`alias`,
-			  concat(SUBSTRING(`l5nty_content`.`introtext`,1,80),'...' ) AS `introtext`,
-			  `l5nty_content`.`images`
+			  concat(`#__categories`.`id`, '-', `#__categories`.`alias`) AS `url_cat`,
+			  concat(`#__content`.`id`, '-', `#__content`.`alias`) AS `url_art`,
+			  concat(`#__categories`.`id`,'-',`#__categories`.`alias`, '/', `#__content`.`id`,'-',`#__content`.`alias`) AS `url`,
+			  `#__content`.`id`,
+			  `#__content`.`title`,
+			  `#__content`.`alias`,
+			  concat(SUBSTRING(`#__content`.`introtext`,1,80),'...' ) AS `introtext`,
+			  `#__content`.`images`
 			FROM
-			  `l5nty_content`
-			  INNER JOIN `l5nty_categories` ON (`l5nty_content`.`catid` = `l5nty_categories`.`id`)
+			  `#__content`
+			  INNER JOIN `#__categories` ON (`#__content`.`catid` = `#__categories`.`id`)
 		WHERE
-		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 12
+		`#__content`.`state` = 1 AND `#__content`.`catid` = 12
 		ORDER BY
 		rand(),
-		`l5nty_content`.`title` ASC
+		`#__content`.`title` ASC
 		LIMIT {$CantClient}";
 		$db->setQuery($sql);
 		$categorias = $db->loadObjectList();
@@ -54,21 +54,21 @@ class ModHelloWorldHelper
 		$dbprefix = $con->dbprefix;
 		$db = &JFactory::getDBO();
 		$sql = "SELECT 
-			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
-			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
-			  concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
-			  `l5nty_content`.`id`,
-			  `l5nty_content`.`title`,
-			  `l5nty_content`.`alias`,
-			  concat(SUBSTRING(`l5nty_content`.`introtext`,1,80),'...' ) AS `introtext`,
-			  `l5nty_content`.`images`
+			  concat(`#__categories`.`id`, '-', `#__categories`.`alias`) AS `url_cat`,
+			  concat(`#__content`.`id`, '-', `#__content`.`alias`) AS `url_art`,
+			  concat(`#__categories`.`id`,'-',`#__categories`.`alias`, '/', `#__content`.`id`,'-',`#__content`.`alias`) AS `url`,
+			  `#__content`.`id`,
+			  `#__content`.`title`,
+			  `#__content`.`alias`,
+			  concat(SUBSTRING(`#__content`.`introtext`,1,80),'...' ) AS `introtext`,
+			  `#__content`.`images`
 			FROM
-			  `l5nty_content`
-			  INNER JOIN `l5nty_categories` ON (`l5nty_content`.`catid` = `l5nty_categories`.`id`)
+			  `#__content`
+			  INNER JOIN `#__categories` ON (`#__content`.`catid` = `#__categories`.`id`)
 		WHERE
-		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 10
+		`#__content`.`state` = 1 AND `#__content`.`catid` = 10
 		ORDER BY
-		`l5nty_content`.`created` DESC
+		`#__content`.`created` DESC
 		LIMIT {$CantNotices}";
 		$db->setQuery($sql);
 		$categorias = $db->loadObjectList();
@@ -99,15 +99,15 @@ class ModHelloWorldHelper
 	public static function getEnlaces()
 	{
 		$sql="SELECT 
-		concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
-		`l5nty_content`.`title`
+		concat(`#__categories`.`id`,'-',`#__categories`.`alias`, '/', `#__content`.`id`,'-',`#__content`.`alias`) AS `url`,
+		`#__content`.`title`
 			FROM
-			  `l5nty_content`
-			  INNER JOIN `l5nty_categories` ON (`l5nty_content`.`catid` = `l5nty_categories`.`id`)
+			  `#__content`
+			  INNER JOIN `#__categories` ON (`#__content`.`catid` = `#__categories`.`id`)
 		WHERE
-		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 9
+		`#__content`.`state` = 1 AND `#__content`.`catid` = 9
 		ORDER BY
-		`l5nty_content`.`title` ASC";
+		`#__content`.`title` ASC";
 		$html='<h3 class="widget-title">Enlaces </h3>
 				<hr class="footer-inline-hr" />
 				<div class="textwidget">';
@@ -132,21 +132,21 @@ class ModHelloWorldHelper
 		$dbprefix = $con->dbprefix;
 		$db = &JFactory::getDBO();
 		$sql = "SELECT 
-			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
-			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
-			  concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
-			  `l5nty_content`.`id`,
-			  `l5nty_content`.`title`,
-			  `l5nty_content`.`alias`,
-			  concat(SUBSTRING(`l5nty_content`.`introtext`,1,80),'...' ) AS `introtext`,
-			  `l5nty_content`.`images`
+			  concat(`#__categories`.`id`, '-', `#__categories`.`alias`) AS `url_cat`,
+			  concat(`#__content`.`id`, '-', `#__content`.`alias`) AS `url_art`,
+			  concat(`#__categories`.`id`,'-',`#__categories`.`alias`, '/', `#__content`.`id`,'-',`#__content`.`alias`) AS `url`,
+			  `#__content`.`id`,
+			  `#__content`.`title`,
+			  `#__content`.`alias`,
+			  concat(SUBSTRING(`#__content`.`introtext`,1,80),'...' ) AS `introtext`,
+			  `#__content`.`images`
 			FROM
-			  `l5nty_content`
-			  INNER JOIN `l5nty_categories` ON (`l5nty_content`.`catid` = `l5nty_categories`.`id`)
+			  `#__content`
+			  INNER JOIN `#__categories` ON (`#__content`.`catid` = `#__categories`.`id`)
 		WHERE
-		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 11
+		`#__content`.`state` = 1 AND `#__content`.`catid` = 11
 		ORDER BY
-		`l5nty_content`.`created` DESC
+		`#__content`.`created` DESC
 		LIMIT {$CantServices}";
 		$db->setQuery($sql);
 		$categorias = $db->loadObjectList();
@@ -177,21 +177,21 @@ class ModHelloWorldHelper
 		$dbprefix = $con->dbprefix;
 		$db = &JFactory::getDBO();
 		$sql = "SELECT 
-			  concat(`l5nty_categories`.`id`, '-', `l5nty_categories`.`alias`) AS `url_cat`,
-			  concat(`l5nty_content`.`id`, '-', `l5nty_content`.`alias`) AS `url_art`,
-			  concat(`l5nty_categories`.`id`,'-',`l5nty_categories`.`alias`, '/', `l5nty_content`.`id`,'-',`l5nty_content`.`alias`) AS `url`,
-			  `l5nty_content`.`id`,
-			  `l5nty_content`.`title`,
-			  `l5nty_content`.`alias`,
-			  `l5nty_content`.`introtext` AS `introtext`,
-			  `l5nty_content`.`images`
+			  concat(`#__categories`.`id`, '-', `#__categories`.`alias`) AS `url_cat`,
+			  concat(`#__content`.`id`, '-', `#__content`.`alias`) AS `url_art`,
+			  concat(`#__categories`.`id`,'-',`#__categories`.`alias`, '/', `#__content`.`id`,'-',`#__content`.`alias`) AS `url`,
+			  `#__content`.`id`,
+			  `#__content`.`title`,
+			  `#__content`.`alias`,
+			  `#__content`.`introtext` AS `introtext`,
+			  `#__content`.`images`
 			FROM
-			  `l5nty_content`
-			  INNER JOIN `l5nty_categories` ON (`l5nty_content`.`catid` = `l5nty_categories`.`id`)
+			  `#__content`
+			  INNER JOIN `#__categories` ON (`#__content`.`catid` = `#__categories`.`id`)
 		WHERE
-		`l5nty_content`.`state` = 1 AND `l5nty_content`.`catid` = 8
+		`#__content`.`state` = 1 AND `#__content`.`catid` = 8
 		ORDER BY
-		`l5nty_content`.`title` ASC";
+		`#__content`.`title` ASC";
 		$db->setQuery($sql);
 		$categorias = $db->loadObjectList();
 		$data=$db->loadObjectList();

@@ -99,9 +99,8 @@ require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
 						 <div id="nav" class="menu-principal-container">
 							<ul id="menu-principal" class="nav-menu">
 							   <li id="menu-item-1310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-								  <a href="servicios/index.html">
+								  <a href="#">
 									 Servicios
-									 <div class="desc">Services</div>
 								  </a>
 								  <ul class="sub-menu">
 									<li id="menu-item-1306" class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -133,13 +132,11 @@ require_once dirname(__FILE__) . '/../../modules/mod_helloworld/helper.php';
 							   <li id="menu-item-1307" class="menu-item menu-item-type-post_type menu-item-object-page">
 								  <a href="8-productos-y-servicios/12-hosting-y-alojamiento">
 									Alojamiento Web
-									<div class="desc">Dedicated Hosting</div>
 								  </a>
 							   </li>
 							   <li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page">
 								  <a href="8-index/8-productos-y-servicios/26-contactenos">
 									 Cont&#225;ctenos
-									 <div class="desc">Contact Us</div>
 								  </a>
 							   </li>
 							   <li class="right">
